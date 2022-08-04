@@ -7,79 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>basic 01 - 상세페이지</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/basic.css">
     <style>
-        * {
-            /* outline: 1px solid #f00; */
-        }
-
-        .c_b {
-            color: #0d6efd;
-        }
-
-        .container {
-            display: flex;
-            width: 1170px;
-            margin: 0 auto;
-            gap: 30px;
-        }
-
-        .inner {
-            width: 1170px;
-            margin: 0 auto;
-        }
-
         .inner h3 {
             margin-bottom: 20px;
         }
 
-        table,
-        th,
-        td {
-            border: 1px solid #eeeded;
-        }
-
-        th {
-            background: #f2f2f2;
-            width: 200px;
-            padding: 18px 0;
-            border-bottom: 1px solid #777;
-        }
-
-        td {
-            padding: 0 0 0 10px;
-        }
-
-        .about {
-            padding: 100px 0;
-            letter-spacing: -0.025em;
-            font-size: 15px;
-        }
-
         .about img {
             width: 100%;
-        }
-
-        .about h2 {
-            font-size: 33px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        /* 박스형태니까 display: block; */
-        .about h2::after {
-            content: "";
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: #0d6efd;
-            margin: 15px auto;
-        }
-
-        /* about 바로 아래의 p 니까 .about>p */
-        .about>p {
-            margin: 0 0 50px 0;
-            font-weight: 400;
-            text-align: center;
+            height: 400px;
+            object-fit: fill;
         }
 
         .about .container {
@@ -100,8 +37,13 @@
         }
 
         .about figure {
+            width: 30%;
             height: 400px;
             overflow: hidden;
+        }
+
+        .about .inner {
+            width: 1200px;
         }
 
         .about h3 {
@@ -118,19 +60,19 @@
             left: 0;
             width: 5px;
             height: 20px;
-            background: #0d6efd;
+            background: var(--mc);
         }
     </style>
 </head>
 
 <body>
-    <section class="about">
-        <h2><span class="c_b">CEO'S</span> GREETINGS</h2>
+    <section class="about basicSection">
+        <h2><span class="mainColor">CEO'S</span> GREETINGS</h2>
         <p>새로운 미래를 열어가는 개구락지</p>
         <div class="container">
             <div class="des">
-                <p class="tit">웹서비스의 <span class="c_b">새로운 미래를 </span><br />
-                    <span class="c_b">개구락지가</span>만들어 가겠습니다.
+                <p class="tit">웹서비스의 <span class="mainColor">새로운 미래를 </span><br />
+                    <span class="mainColor">개구락지가</span>만들어 가겠습니다.
                 </p>
 
                 <p>
@@ -157,24 +99,29 @@
         </div>
         <div class="inner">
             <h3>주요현황</h3>
-            <table class="state" , border="collapse">
-                <tr>
-                    <th>설립일</th>
-                    <td>2000년 1월 15일</td>
-                </tr>
-                <tr>
-                    <th>본사 주소</th>
-                    <td>서울시 종로구 광화문</td>
-                </tr>
-                <tr>
-                    <th>임직원 수</th>
-                    <td>204명</td>
-                </tr>
-                <tr>
-                    <th>법인 및 지사</th>
-                    <td>84개</td>
-                </tr>
-            </table>
+            <div class="responsive-table">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>설립일</th>
+                            <td>2000년 1월 15일</td>
+                        </tr>
+                        <tr>
+                            <th>본사 주소</th>
+                            <td>서울시 종로구 광화문</td>
+                        </tr>
+                        <tr>
+                            <th>임직원 수</th>
+                            <td>204명</td>
+                        </tr>
+                        <tr>
+                            <th>법인 및 지사</th>
+                            <td>84개</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
 
         </div>
     </section>

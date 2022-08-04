@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic 03</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <style>
+        .Business02 .container {
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .Business02 .container>div {
+            flex: 1;
+        }
+
+        .Business02 .left img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* margin-bottom을 줘서 아래 div박스와 하는건 여기서 무의미 */
+        .Business02 .right {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid var(--dc);
+            padding: 40px 0 0 0;
+        }
+
+        .Business02 .right h3 {
+            font-size: 31px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+
+        .Business02 .right p {
+            margin: 0 0 30px 0;
+        }
+
+        .Business02 .right .bottom {
+            margin: auto 0 0 0;
+            padding: 20px 20px 40px 20px;
+            background: var(--lc);
+            border-top: 1px solid var(--gc);
+            line-height: 1.2;
+        }
+
+        .Business02 .inner {
+            padding: 0 15px;
+        }
+
+        .Business02 .inner h3 {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 0 0 30px 0;
+        }
+
+        .Business02 .inner h3::before {
+            content: "/";
+            color: var(--mc);
+            font-size: 19px;
+            font-weight: 900;
+            margin: 0 10px 0 0;
+            display: inline-block;
+            transform: translateY(-10px) rotate(20deg);
+        }
+
+        /* display: inline-block;가 없으면 transform이 안 먹힘 */
+
+        .Business02 .inner ul {
+            padding: 30px 0;
+            border-top: 1px solid var(--dc);
+            border-bottom: 1px solid var(--dc);
+        }
+
+        .Business02 .inner ul>li {
+            float: left;
+            width: 50%;
+            margin: 0 0 10px 0;
+        }
+
+        .Business02 .inner ul>li::before {
+            content: attr(data-num);
+            display: inline-block;
+            padding: 5px;
+            color: var(--lc);
+            background: var(--dc);
+            border-radius: 13px;
+            margin: 0 15px 0 0;
+            font-style: italic;
+        }
+
+        /* border-radius 직사각형에 픽셀을 주면 타원이 된다.padding 준 게 있으니 폰트사이즈 계산해서 값 줄 것. */
+    </style>
+</head>
+
+<body>
+    <section class="Business02 basicSection">
+        <h2><span>OUR</span>BUSINESS</h2>
+        <p>개구락지의 다양한 사업영역을 소개합니다.</p>
+        <div class="container">
+            <div class="left">
+                <figure>
+                    <img src="./img/hd01.jpg" alt="" />
+                </figure>
+            </div>
+            <div class="right">
+                <h3>심플하지만 다 갖춘 개구락지</h3>
+
+                <p>홈페이지제작에 관해 궁금하신 사항은 언제든지 문의바랍니다.</p>
+                <ul class="dotList">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+
+                <div class="bottom">
+                    홈페이지제작에 관해 궁금하신 사항은 언제든지 문의바랍니다.<br />
+                    개구락지의 다양한 사업영역을 소개합니다.
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <h3>개구락지의 사업소개</h3>
+            <ul class="row">
+                <li data-num="01">Lorem ipsum dolor sit amet.</li>
+                <li data-num="02">Lorem ipsum dolor sit amet consectetur.</li>
+                <li data-num="03">Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                <li data-num="04">Lorem ipsum dolor sit amet consectetur.</li>
+            </ul>
+        </div>
+        <!--
+           inner는 현재  basic.css에서 float임.
+
+         -->
+    </section>
+</body>
+
+</html>

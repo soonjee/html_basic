@@ -1,0 +1,102 @@
+/* 여러 Page가 통일성을 가져야 할 때 사용,  
+    색상이 변경되는 것을 방지하기 위해 변수로 선언해서 사용하는 장치
+    컬러, 폰트 등등 설정해놓으면 좋음 */
+:root {
+    --mc :#0d6efd;
+    --sc: #dc3545;
+    --gc:#ced4da;
+    --lc:#f8f9fa;
+    --dc:#212529;
+}
+/* 컬러는 부트스트랩 사이트 가서 컬러 긁어오면 편함 */
+
+.mainColor {
+    color: var(--mc);
+}
+
+.basicSection {
+    padding: 100px 0;
+    letter-spacing: -0.025em;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    gap: 30px;
+}
+/* 부트스트랩에서 쓰고있는 방식
+ .container>*{
+    flex: 1;
+} */
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* clear:both 플롯이 떴을때 부모높이 없애는걸 방지해주는 장치 */
+.inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.basicSection h2 {
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 박스형태니까 display: block; */
+.basicSection h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--mc);
+    margin: 15px auto;
+}
+
+.basicSection h2 span {
+    color: var(--mc);
+}
+
+.basicSection>p {
+    margin: 0 0 50px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.dotList li {
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 1.2;
+    margin: 0 0 5px 0;
+}
+
+.dotList li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: var(--dc);
+}
+
+.table th~td {
+    border: 1px solid #eeeded;
+}
+
+.table th {
+    background: #f2f2f2;
+    width: 200px;
+    padding: 18px 0;
+    border-bottom: 1px solid #777;
+}
+
+.table td {
+    padding: 0 0 0 10px;
+}   

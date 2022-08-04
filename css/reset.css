@@ -184,3 +184,10 @@ textarea {
 .row:after {
     clear: both;
 }
+
+
+/* .row::after {
+    content: "";
+    display: table,
+} */
+/* display:block 도 되는데 table이 권장사항 */

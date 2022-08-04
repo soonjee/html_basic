@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic 02 - 상세페이지:호버</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/basic.css">
+    <style>
+        .business h2 {
+            font-size: 33px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* 박스형태니까 display: block; */
+        .business h2::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: var(--mc);
+            margin: 15px auto;
+        }
+
+        /* about 바로 아래의 p 니까 .about>p */
+        .business>p {
+            margin: 0 0 50px 0;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .business .container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .business figure {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business figure~figure {
+            border-left: 1px solid #fff;
+        }
+
+        .business figure .cover {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            transition: left 0.5s;
+            padding: 40px 10px;
+        }
+
+        .business figure:hover .cover {
+            left: 0;
+        }
+
+        .business figure:hover .inbox {
+            transition: 0.5s 0.3s;
+        }
+
+        .business figure:hover .inbox {
+            transform: translateX(0);
+        }
+
+        .business figure h3 {
+            font-size: 21px;
+            font-weight: 500;
+            padding: 0 0 20px 0;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .business figure p {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.25;
+        }
+
+        .business figure .cover a {
+            /* display: inline-block; */
+            align-self: flex-start;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 14px 24px;
+            margin-top: auto;
+        }
+
+
+        .business .inner::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .business .inner>div {
+            float: left;
+            width: 50%;
+            padding: 0 15px;
+        }
+
+        .business .container {
+            margin: 0 auto 100px auto;
+        }
+
+        .business .tit strong {
+            position: relative;
+            display: block;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            padding: 0 0 0 20px;
+        }
+
+        .business .tit p {
+            font-size: 15px;
+            font-weight: 300;
+            padding: 0 0 0 20px;
+        }
+
+        .business .tit strong::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100px;
+            background: var(--mc);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="business basicSection">
+        <h2><span class="c_b">OUR</span> BUSINESS</h2>
+        <p>새로운 미래를 열어가는 개구락지</p>
+        <div class="container">
+            <figure>
+                <div class="inbox">
+                    <img src="./img/hd01.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, excepturi?</p>
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./img/hd02.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, excepturi?
+                        dipisicing elit. Autem, excepturi?
+                    </p>
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./img/hd03.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, excepturi?</p>
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+            <figure>
+                <div class="inbox">
+                    <img src="./img/hd04.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <h3>주요사업 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, excepturi?</p>
+
+                    <a href="">자세히보기</a>
+                </div>
+            </figure>
+        </div>
+        <!-- float 사용 -->
+        <div class="inner">
+            <div class="tit">
+                <strong>심플하지만 다 갖춘 개구락지</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugiat sed, laborum ipsum dolorum
+                    sapiente!</p>
+            </div>
+            <div class="list">
+                <ul class="dotList">
+                    <li>Lorem ipsum dolor sit ame adipisicing.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores laboriosam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
