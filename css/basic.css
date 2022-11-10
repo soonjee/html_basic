@@ -20,54 +20,49 @@
     font-size: 15px;
 }
 
+.basicSection h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.basicSection h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--mc);
+    margin: 15px auto;
+}
+
+.basicSection h2 span {
+    color: var(--mc)
+}
+
+.basicSection>p {
+    margin: 0 0 50px 0;
+    font-weight: 300;
+    text-align: center;
+}
+
 .container {
     display: flex;
     width: 1170px;
     margin: 0 auto;
     gap: 30px;
 }
-/* 부트스트랩에서 쓰고있는 방식
- .container>*{
-    flex: 1;
-} */
 
 .inner {
     width: 1200px;
     margin: 0 auto;
 }
 
-/* clear:both 플롯이 떴을때 부모높이 없애는걸 방지해주는 장치 */
 .inner::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.basicSection h2 {
-    font-size: 33px;
-    font-weight: 600;
-    text-align: center;
-}
-
-/* 박스형태니까 display: block; */
-.basicSection h2::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: var(--mc);
-    margin: 15px auto;
-}
-
-.basicSection h2 span {
-    color: var(--mc);
-}
-
-.basicSection>p {
-    margin: 0 0 50px 0;
-    font-weight: 400;
-    text-align: center;
-}
 
 .dotList li {
     position: relative;
@@ -79,24 +74,42 @@
 .dotList li::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 0;
-    width: 4px;
-    height: 4px;
-    background: var(--dc);
+    width: 2px;
+    height: 2px;
+    background: var(--sc);
 }
 
-.table th~td {
-    border: 1px solid #eeeded;
-}
-
-.table th {
-    background: #f2f2f2;
-    width: 200px;
-    padding: 18px 0;
-    border-bottom: 1px solid #777;
+.table {
+    width: 100%;
+    border-top: 3px solid var(--mc);
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .table td {
-    padding: 0 0 0 10px;
-}   
+    padding: 15px 15px;
+    border-left: 1px solid var(--gc);
+}
+
+.table th {
+    padding: 15px 15px;
+    text-align: left;
+    background: var(--lc);
+    font-weight: 400;
+}
+
+.table tr {
+    border-bottom: 1px solid var(--gc);
+}
+
+.table caption {
+    text-align: right;
+    caption-side: bottom;
+    margin: 10px 0 0 0;
+}
+
+.responsive-table {
+    width: 100%;
+}

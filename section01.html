@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/basic.css">
     <style>
-        .inner h3 {
-            margin-bottom: 20px;
-        }
-
         .about img {
             width: 100%;
             height: 400px;
@@ -20,20 +16,20 @@
         }
 
         .about .container {
+            margin: 0 auto 100px auto;
             justify-content: space-between;
         }
 
-        /*  line-height를 줌으써 박스와 라인이 깔끔하게 정리됨 */
         .about .tit {
             font-size: 25px;
-            font-weight: 400;
+            font-weight: 500;
             margin: 0 0 50px 0;
             line-height: 1.45;
         }
 
         .about .container p {
             line-height: 1.45;
-            margin: 0 0 50px 0;
+            margin: 0 0 30px 0;
         }
 
         .about figure {
@@ -43,14 +39,15 @@
         }
 
         .about .inner {
-            width: 1200px;
+            width: 1170px;
         }
 
         .about h3 {
             position: relative;
             font-size: 23px;
             font-weight: 500;
-            padding: 0 0 0 30px;
+            padding: 0 0 0 10px;
+            margin: 0 0 30px 0;
         }
 
         .about h3::before {
@@ -58,20 +55,21 @@
             position: absolute;
             top: 2px;
             left: 0;
-            width: 5px;
+            width: 3px;
             height: 20px;
-            background: var(--mc);
+            background: #0d6efd;
         }
     </style>
 </head>
 
 <body>
     <section class="about basicSection">
-        <h2><span class="mainColor">CEO'S</span> GREETINGS</h2>
+        <h2><span>CEO's</span> GREETINGS</h2>
         <p>새로운 미래를 열어가는 개구락지</p>
         <div class="container">
             <div class="des">
-                <p class="tit">웹서비스의 <span class="mainColor">새로운 미래를 </span><br />
+                <p class="tit">
+                    웹서비스의 <span class="mainColor">새로운 미래를 </span><br />
                     <span class="mainColor">개구락지가</span>만들어 가겠습니다.
                 </p>
 
@@ -101,28 +99,29 @@
             <h3>주요현황</h3>
             <div class="responsive-table">
                 <table class="table">
+                    <caption>* description</caption>
+                    <colgroup>
+                        <col style="width:20%" />
+                        <col style="width:30%" />
+                        <col style="width:20%" />
+                        <col style="width:30%" />
+                    </colgroup>
                     <tbody>
                         <tr>
-                            <th>설립일</th>
-                            <td>2000년 1월 15일</td>
+                            <th>주 소</th>
+                            <td>부산시 동래구 사직동 1234-56 쌍둥이 돼지국밥 옆</td>
+                            <th>전화번호</th>
+                            <td>051-783-2317</td>
                         </tr>
                         <tr>
-                            <th>본사 주소</th>
-                            <td>서울시 종로구 광화문</td>
-                        </tr>
-                        <tr>
-                            <th>임직원 수</th>
-                            <td>204명</td>
-                        </tr>
-                        <tr>
-                            <th>법인 및 지사</th>
-                            <td>84개</td>
+                            <th>전화번호</th>
+                            <td>051-783-2317</td>
+                            <th>전화번호</th>
+                            <td>051-783-2317</td>
                         </tr>
                     </tbody>
                 </table>
-
             </div>
-
         </div>
     </section>
 </body>
